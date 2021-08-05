@@ -33,4 +33,3 @@ const popularGames = `games?dates=${lastYear},${currentDate}&ordering=-rating&pa
 
 const popularGamesURL = () => `${base_url}${popularGames}`;
 
-console.log(popularGamesURL());
