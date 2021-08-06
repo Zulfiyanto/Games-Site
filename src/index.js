@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
+import thunk from "redux-thunk";
 import App from "./App";
 import rootReducer from "./reducers";
 import reportWebVitals from "./reportWebVitals";
 
+const composeEchanters = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
   rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEchanters(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
