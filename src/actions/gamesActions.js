@@ -1,12 +1,16 @@
 import axios from "axios";
-import { popularGamesURL } from "../Api";
+import { popularGamesURL, upComingGamesURL, newGamesURL } from "../Api";
 
 export const loadGames = () => async (dispatch) => {
   const popularData = await axios.get(popularGamesURL());
+  const upComingData = await axios.get(upComingGamesURL());
+  const newGamesData = await axios.get(newGamesURL());
   dispatch({
     type: "FETCH_GAMES",
     payload: {
       popular: popularData.data.results,
+      upComing: upComingData.data.results,
+      newGames: newGamesData.data.results,
     },
   });
 };
