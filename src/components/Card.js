@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Card = ({ name, released, image }) => {
   return (
     <Cards>
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       <p>{released}</p>
       <img src={image} alt={name} />
     </Cards>
@@ -20,6 +20,7 @@ const Cards = styled(motion.div)`
     width: 100%;
     height: 40vh;
     object-fit: cover;
+    border-radius: 0rem 0rem 1rem 1rem;
   }
 `;
 export default Card;
