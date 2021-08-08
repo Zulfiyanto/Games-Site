@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import loadDetail from "../actions/detailActions";
 
-const Card = ({ name, released, image }) => {
+const Card = ({ name, released, image, id }) => {
+  //load details
+  const dispatch = useDispatch();
+
+  const loadDetailsHandler = () => {
+    dispatch(loadDetail(id));
+  };
   return (
-    <Cards>
+    <Cards onClick={loadDetailsHandler}>
       <h4>{name}</h4>
       <p>{released}</p>
       <img src={image} alt={name} />
