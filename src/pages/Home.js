@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { loadGames } from "../actions/gamesActions";
 import Card from "../components/Card";
+import GameDetail from "../components/GameDetails";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const Home = () => {
   const { popular, newGames, upComing } = useSelector((state) => state.games);
   return (
     <GameList>
+      <GameDetail />
       {/* //Upcoming games */}
       <h1>Upcoming Games</h1>
       <Games>
