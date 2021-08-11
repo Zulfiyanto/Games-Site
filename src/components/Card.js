@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import loadDetail from "../actions/detailActions";
 
@@ -12,9 +13,11 @@ const Card = ({ name, released, image, id }) => {
   };
   return (
     <Cards onClick={loadDetailsHandler}>
-      <h4>{name}</h4>
-      <p>{released}</p>
-      <img src={image} alt={name} />
+      <Link to={`/game/${id}`}>
+        <h4>{name}</h4>
+        <p>{released}</p>
+        <img src={image} alt={name} />
+      </Link>
     </Cards>
   );
 };
@@ -24,6 +27,7 @@ const Cards = styled(motion.div)`
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 1rem;
+  cursor: pointer;
   img {
     width: 100%;
     height: 40vh;

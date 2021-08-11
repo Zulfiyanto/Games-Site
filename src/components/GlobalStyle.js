@@ -25,6 +25,7 @@ html{
     h4{
         font-size: 1rem;
         padding: 1.3rem 0rem;
+        text-decoration: none;
     }
     p{
         font-size: 1rem;
@@ -32,8 +33,8 @@ html{
         line-height: 200%;
     }
     a{
-        text-decoration: none
-        ;
+        text-decoration: none;
+        color: #000000;
     }
 }
 `;
