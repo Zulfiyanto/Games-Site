@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
-
 html{
     &::-webkit-scrollbar{
         width: 0.5rem;
@@ -24,8 +23,8 @@ html{
             font-weight: medium;
     }
     h4{
-        font-size: 1.1rem;
-        padding: 1.3rem;
+        font-size: 1rem;
+        padding: 1.3rem 0rem;
     }
     p{
         font-size: 1rem;
@@ -33,7 +32,8 @@ html{
         line-height: 200%;
     }
     a{
-        text-decoration: none;
+        text-decoration: none
+        ;
     }
 }
 `;
