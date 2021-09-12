@@ -30,5 +30,15 @@ const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 2}-${currentMonth}-${currentDay}`;
 
 const popularGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const upComingGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
+const newGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
 export const popularGamesURL = () => `${base_url}${popularGames}`;
+export const upComingGamesURL = () => `${base_url}${upComingGames}`;
+export const newGamesURL = () => `${base_url}${newGames}`;
+
+//Games Details
+export const gameDetailsURL = (game_id) =>
+  `${base_url}games/${game_id}?&key=${process.env.REACT_APP_API_KEY}`;
+export const gameSSURL = (game_id) =>
+  `${base_url}games/${game_id}/screenshots?&key=${process.env.REACT_APP_API_KEY}`;

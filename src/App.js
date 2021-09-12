@@ -1,16 +1,15 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { loadGames } from "./actions/gamesActions";
+import { Route } from "react-router-dom";
+import GlobalStyle from "./components/GlobalStyle";
+import Home from "./pages/Home";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadGames());
-  });
   return (
     <div className="App">
-      <h1>Nama</h1>
+      <GlobalStyle />
+      {/* Membuat HOME tetap terpanggil */}
+      <Route path={["game/:id", "/"]}>
+        <Home />
+      </Route>
     </div>
   );
 }
