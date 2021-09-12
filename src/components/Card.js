@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import loadDetail from "../actions/detailActions";
+import { smallImage } from "../util";
 
 const Card = ({ name, released, image, id }) => {
+  // Fix scroll
+  const history = useHistory();
+  // history.location.pathname === "/"
+  //   ? (document.body.style.overflow = "auto")
+  //   : (document.body.style.overflow = "hidden");
+
   //load details
   const dispatch = useDispatch();
-
   const loadDetailsHandler = () => {
+    document.body.style.overflow = "hidden";
     dispatch(loadDetail(id));
   };
   return (
@@ -16,7 +23,7 @@ const Card = ({ name, released, image, id }) => {
       <Link to={`/game/${id}`}>
         <h4>{name}</h4>
         <p>{released}</p>
-        <img src={image} alt={name} />
+        <img src={smallImage(image, 640)} alt={name} />
       </Link>
     </Cards>
   );
@@ -28,11 +35,11 @@ const Cards = styled(motion.div)`
   text-align: center;
   border-radius: 1rem;
   cursor: pointer;
+  overflow: hidden;
   img {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-    border-radius: 0rem 0rem 1rem 1rem;
   }
 `;
 export default Card;

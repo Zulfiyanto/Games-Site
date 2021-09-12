@@ -36,6 +36,9 @@ html{
         text-decoration: none;
         color: #000000;
     }
+    img{
+        display: block;
+    }
 }
 `;
 
