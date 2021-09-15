@@ -3,9 +3,12 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import loadDetail from "../actions/detailActions";
+import { popup } from "../animation";
 import { smallImage } from "../util";
 
 const Card = ({ name, released, image, id }) => {
+  const stringPathId = id.toString();
+
   // Fix scroll
   const history = useHistory();
   // history.location.pathname === "/"
@@ -19,7 +22,13 @@ const Card = ({ name, released, image, id }) => {
     dispatch(loadDetail(id));
   };
   return (
-    <Cards onClick={loadDetailsHandler}>
+    <Cards
+      layoutId={stringPathId}
+      onClick={loadDetailsHandler}
+      variants={popup}
+      initial="hidden"
+      animate="show"
+    >
       <Link to={`/game/${id}`}>
         <h4>{name}</h4>
         <p>{released}</p>

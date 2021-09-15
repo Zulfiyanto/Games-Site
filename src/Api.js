@@ -36,9 +36,14 @@ const newGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${lastYear},$
 export const popularGamesURL = () => `${base_url}${popularGames}`;
 export const upComingGamesURL = () => `${base_url}${upComingGames}`;
 export const newGamesURL = () => `${base_url}${newGames}`;
+console.log(popularGames);
 
 //Games Details
 export const gameDetailsURL = (game_id) =>
   `${base_url}games/${game_id}?&key=${process.env.REACT_APP_API_KEY}`;
 export const gameSSURL = (game_id) =>
   `${base_url}games/${game_id}/screenshots?&key=${process.env.REACT_APP_API_KEY}`;
+
+//Search Game
+export const searchGamesURL = (name) =>
+  `${base_url}games??&key=${process.env.REACT_APP_API_KEY}&search=${name}&page_size=9`;
