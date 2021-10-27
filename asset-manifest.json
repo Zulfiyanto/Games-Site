@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/Games-Site/static/js/main.351447fc.chunk.js",
+    "main.js.map": "/Games-Site/static/js/main.351447fc.chunk.js.map",
+    "runtime-main.js": "/Games-Site/static/js/runtime-main.62629702.js",
+    "runtime-main.js.map": "/Games-Site/static/js/runtime-main.62629702.js.map",
+    "static/js/2.f6a265ab.chunk.js": "/Games-Site/static/js/2.f6a265ab.chunk.js",
+    "static/js/2.f6a265ab.chunk.js.map": "/Games-Site/static/js/2.f6a265ab.chunk.js.map",
+    "static/js/3.605c44de.chunk.js": "/Games-Site/static/js/3.605c44de.chunk.js",
+    "static/js/3.605c44de.chunk.js.map": "/Games-Site/static/js/3.605c44de.chunk.js.map",
+    "index.html": "/Games-Site/index.html",
+    "static/js/2.f6a265ab.chunk.js.LICENSE.txt": "/Games-Site/static/js/2.f6a265ab.chunk.js.LICENSE.txt",
+    "static/media/apple.5757c37e.svg": "/Games-Site/static/media/apple.5757c37e.svg",
+    "static/media/gamepad.c9269ef5.svg": "/Games-Site/static/media/gamepad.c9269ef5.svg",
+    "static/media/logo.9b6b8655.svg": "/Games-Site/static/media/logo.9b6b8655.svg",
+    "static/media/nintendo.f579be04.svg": "/Games-Site/static/media/nintendo.f579be04.svg",
+    "static/media/playstation.18cc4b9c.svg": "/Games-Site/static/media/playstation.18cc4b9c.svg",
+    "static/media/steam.d7b8819f.svg": "/Games-Site/static/media/steam.d7b8819f.svg",
+    "static/media/xbox.3e7db735.svg": "/Games-Site/static/media/xbox.3e7db735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62629702.js",
+    "static/js/2.f6a265ab.chunk.js",
+    "static/js/main.351447fc.chunk.js"
+  ]
+}
