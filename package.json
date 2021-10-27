@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Zulfiyanto.github.io/Games-Site",
   "name": "games-site",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +11,7 @@
     "dotenv": "^10.0.0",
     "env": "^0.0.2",
     "framer-motion": "^4.1.17",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -21,6 +23,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy":"yarn run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
